@@ -13,29 +13,29 @@ object BroadcastManager {
 
     // Mapping of labels to nicely formatted names
     private val labelDisplayNames = mapOf(
-        "legendary" to "Legendary",
-        "restricted" to "Restricted",
-        "mythical" to "Mythical",
-        "ultra_beast" to "Ultra Beast",
-        "fossil" to "Fossil",
-        "powerhouse" to "Powerhouse",
-        "baby" to "Baby",
+        "legendary" to "Legendario",
+        "restricted" to "Restringido",
+        "mythical" to "Mítico",
+        "ultra_beast" to "Ultraente",
+        "fossil" to "Fósil",
+        "powerhouse" to "Potente",
+        "baby" to "Bebé",
         "regional" to "Regional",
-        "kantonian_form" to "Kantonian Form",
-        "johtonian_form" to "Johtonian Form",
-        "hoennian_form" to "Hoennian Form",
-        "sinnohan_form" to "Sinnohan Form",
-        "unovan_form" to "Unovan Form",
-        "kalosian_form" to "Kalosian Form",
-        "alolan_form" to "Alolan Form",
-        "galarian_form" to "Galarian Form",
-        "hisuian_form" to "Hisuian Form",
-        "paldean_form" to "Paldean Form",
+        "kantonian_form" to "Forma de Kanto",
+        "johtonian_form" to "Forma de Johto",
+        "hoennian_form" to "Forma de Hoenn",
+        "sinnohan_form" to "Forma de Sinnoh",
+        "unovan_form" to "Forma de Teselia",
+        "kalosian_form" to "Forma de Kalos",
+        "alolan_form" to "Forma de Alola",
+        "galarian_form" to "Forma de Galar",
+        "hisuian_form" to "Forma de Hisui",
+        "paldean_form" to "Forma de Paldea",
         "mega" to "Mega",
-        "primal" to "Primal",
-        "gmax" to "Gigantamax",
-        "totem" to "Totem",
-        "paradox" to "Paradox",
+        "primal" to "Primigenio",
+        "gmax" to "Gigamax",
+        "totem" to "Tótem",
+        "paradox" to "Paradoja",
         "gen1" to "Gen 1",
         "gen2" to "Gen 2",
         "gen3" to "Gen 3",
@@ -47,30 +47,30 @@ object BroadcastManager {
         "gen8" to "Gen 8",
         "gen8a" to "Gen 8a",
         "gen9" to "Gen 9",
-        "customized_official" to "Customized Official",
-        "custom" to "Custom"
+        "customized_official" to "Oficial Personalizado",
+        "custom" to "Personalizado"
     )
 
     // Display names for elemental types
     private val typeDisplayNames = mapOf(
         "normal" to "Normal",
-        "fire" to "Fire",
-        "water" to "Water",
-        "electric" to "Electric",
-        "grass" to "Grass",
-        "ice" to "Ice",
-        "fighting" to "Fighting",
-        "poison" to "Poison",
-        "ground" to "Ground",
-        "flying" to "Flying",
-        "psychic" to "Psychic",
-        "bug" to "Bug",
-        "rock" to "Rock",
-        "ghost" to "Ghost",
-        "dragon" to "Dragon",
-        "dark" to "Dark",
-        "steel" to "Steel",
-        "fairy" to "Fairy"
+        "fire" to "Fuego",
+        "water" to "Agua",
+        "electric" to "Eléctrico",
+        "grass" to "Planta",
+        "ice" to "Hielo",
+        "fighting" to "Lucha",
+        "poison" to "Veneno",
+        "ground" to "Tierra",
+        "flying" to "Volador",
+        "psychic" to "Psíquico",
+        "bug" to "Bicho",
+        "rock" to "Roca",
+        "ghost" to "Fantasma",
+        "dragon" to "Dragón",
+        "dark" to "Siniestro",
+        "steel" to "Acero",
+        "fairy" to "Hada"
     )
 
     fun startBroadcasting() {
@@ -105,14 +105,14 @@ object BroadcastManager {
                         val joined = when (allTerms.size) {
                             0 -> ""
                             1 -> allTerms[0]
-                            2 -> "${allTerms[0]}§r or ${allTerms[1]}"
-                            else -> allTerms.dropLast(1).joinToString("§r, ") + "§r or ${allTerms.last()}"
+                            2 -> "${allTerms[0]}§r o ${allTerms[1]}"
+                            else -> allTerms.dropLast(1).joinToString("§r, ") + "§r o ${allTerms.last()}"
                         }
 
                         val message = if (hasAllSpecies) {
-                            "§eToday is a §6Shiny Day! §eIf you're lucky, you may encounter a shiny Pokémon!"
+                            "§e¡Hoy es el §6Shiny Day! §e¡Si tienes suerte, podrías encontrar un Pokémon Shiny!"
                         } else {
-                            "§eToday is a §6Shiny Day! §eIf you're lucky, you may encounter a shiny $joined §ePokémon!"
+                            "§e¡Hoy es el §6Shiny Day! §e¡Si tienes suerte, podrías encontrar un Pokémon $joined §eShiny!"
                         }
 
                         broadcastToServer(message)
@@ -139,6 +139,6 @@ object BroadcastManager {
 
     fun shutdown() {
         scheduler.shutdownNow()
-        println("Cobblemon Shiny Days: Broadcast scheduler shut down successfully.")
+        println("Cobblemon Shiny Days: El programador de anuncios se ha cerrado correctamente.")
     }
 }

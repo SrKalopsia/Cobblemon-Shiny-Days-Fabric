@@ -12,10 +12,10 @@ import java.time.LocalDateTime
 
 class CobblemonShinyDays : ModInitializer {
     override fun onInitialize() {
-        println("Cobblemon Shiny Days mod loaded!")
+        println("¡El mod Cobblemon Shiny Days ha sido cargado!")
 
         val config = ConfigLoader.loadConfig()
-        println("Cobblemon Shiny Days config loaded with ${config.size} time block(s).")
+        println("Configuración de Cobblemon Shiny Days cargada con ${config.size} bloque(s) de tiempo.")
 
         // Register shiny chance logic
         CobblemonEvents.SHINY_CHANCE_CALCULATION.subscribe { event ->
@@ -27,7 +27,7 @@ class CobblemonShinyDays : ModInitializer {
 
         // Shutdown hook
         ServerLifecycleEvents.SERVER_STOPPING.register {
-            println("Cobblemon Shiny Days: Server is stopping, shutting down...")
+            println("Cobblemon Shiny Days: El servidor se está deteniendo, cerrando...")
             BroadcastManager.shutdown()
         }
 
