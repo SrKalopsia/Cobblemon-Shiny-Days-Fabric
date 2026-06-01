@@ -57,3 +57,27 @@ The configuration has 5 customizable options:
     "broadcastInterval": 300
   }
 ]
+```
+The config above would work as follows
+
+**Saturday and Sunday** - Pikachu, Bulbasaur, Charmander, Squirtle, Normal-type, legendary and mythical Pokemon have 5x shiny rates
+
+**Monday** - All Gen 1 & Water-type Pokemon have 2x shiny rates
+
+**Tuesday** - All Gen 2 & Fire-type Pokemon have 2x shiny rates
+
+**Wednesday** - All Gen 3 & Grass-type Pokemon have 2x shiny rates
+
+**Thursday** - All Gen 4 & Psychic-type Pokemon have 2x shiny rates
+
+**Friday** - All Gen 5 & Steel-type Pokemon have 2x shiny rates
+
+## Authors
+
+Original Creation: Shadymitsu and ChatGPT  
+Localization & Polymer Implementation: SrKalopsia
+
+## License
+
+[MIT](https://choosealicense.com/licenses/mit/)
+
