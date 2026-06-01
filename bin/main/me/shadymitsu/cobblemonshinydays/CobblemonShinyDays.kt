@@ -2,6 +2,7 @@ package me.shadymitsu.cobblemonshinydays
 
 import com.cobblemon.mod.common.api.events.CobblemonEvents
 import com.cobblemon.mod.common.api.events.pokemon.ShinyChanceCalculationEvent
+import eu.pb4.polymer.resourcepack.api.PolymerResourcePackUtils
 import me.shadymitsu.cobblemonshinydays.broadcast.BroadcastManager
 import me.shadymitsu.cobblemonshinydays.commands.CheckCommand
 import me.shadymitsu.cobblemonshinydays.config.ConfigLoader
@@ -13,6 +14,8 @@ import java.time.LocalDateTime
 class CobblemonShinyDays : ModInitializer {
     override fun onInitialize() {
         println("¡El mod Cobblemon Shiny Days ha sido cargado!")
+
+        PolymerResourcePackUtils.addModAssets("cobblemonshinydays")
 
         val config = ConfigLoader.loadConfig()
         println("Configuración de Cobblemon Shiny Days cargada con ${config.size} bloque(s) de tiempo.")
