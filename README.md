@@ -10,7 +10,6 @@ Choose days of the week to increase shiny odds for either all Pokémon or specif
 
 * **Cobblemon** - [Modrinth](https://modrinth.com/mod/cobblemon/) / [Curseforge](https://www.curseforge.com/minecraft/mc-mods/cobblemon)
 * **Fabric Language Kotlin** - [Modrinth](https://modrinth.com/mod/fabric-language-kotlin) / [Curseforge](https://www.curseforge.com/minecraft/mc-mods/fabric-language-kotlin)
-* **Polymer (Core)** - [Modrinth](https://modrinth.com/mod/polymer) (Required for server-side localization)
 
 ## Features
 
